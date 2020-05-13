@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\codecool\\c# Web (restart)\\1st TW\\AskMate\\AskMate.csproj": {}
+    "C:\\Users\\Geris\\Desktop\\AskMate\\AskMate.csproj": {}
   },
   "projects": {
-    "F:\\codecool\\c# Web (restart)\\1st TW\\AskMate\\AskMate.csproj": {
+    "C:\\Users\\Geris\\Desktop\\AskMate\\AskMate.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\codecool\\c# Web (restart)\\1st TW\\AskMate\\AskMate.csproj",
+        "projectUniqueName": "C:\\Users\\Geris\\Desktop\\AskMate\\AskMate.csproj",
         "projectName": "AskMate",
-        "projectPath": "F:\\codecool\\c# Web (restart)\\1st TW\\AskMate\\AskMate.csproj",
+        "projectPath": "C:\\Users\\Geris\\Desktop\\AskMate\\AskMate.csproj",
         "packagesPath": "C:\\Users\\Geris\\.nuget\\packages\\",
-        "outputPath": "F:\\codecool\\c# Web (restart)\\1st TW\\AskMate\\obj\\",
+        "outputPath": "C:\\Users\\Geris\\Desktop\\AskMate\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Geris\\AppData\\Roaming\\NuGet\\NuGet.Config",

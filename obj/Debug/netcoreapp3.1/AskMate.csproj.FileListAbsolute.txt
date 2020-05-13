@@ -33,3 +33,39 @@ F:\codecool\c# Web (restart)\1st TW\AskMate\obj\Debug\netcoreapp3.1\AskMate.View
 F:\codecool\c# Web (restart)\1st TW\AskMate\obj\Debug\netcoreapp3.1\AskMate.dll
 F:\codecool\c# Web (restart)\1st TW\AskMate\obj\Debug\netcoreapp3.1\AskMate.pdb
 F:\codecool\c# Web (restart)\1st TW\AskMate\obj\Debug\netcoreapp3.1\AskMate.csproj.CopyComplete
+C:\Users\Geris\Desktop\AskMate\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\Geris\Desktop\AskMate\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Geris\Desktop\AskMate\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\Geris\Desktop\AskMate\bin\Debug\netcoreapp3.1\AskMate.exe
+C:\Users\Geris\Desktop\AskMate\bin\Debug\netcoreapp3.1\AskMate.deps.json
+C:\Users\Geris\Desktop\AskMate\bin\Debug\netcoreapp3.1\AskMate.runtimeconfig.json
+C:\Users\Geris\Desktop\AskMate\bin\Debug\netcoreapp3.1\AskMate.runtimeconfig.dev.json
+C:\Users\Geris\Desktop\AskMate\bin\Debug\netcoreapp3.1\AskMate.dll
+C:\Users\Geris\Desktop\AskMate\bin\Debug\netcoreapp3.1\AskMate.pdb
+C:\Users\Geris\Desktop\AskMate\bin\Debug\netcoreapp3.1\AskMate.Views.dll
+C:\Users\Geris\Desktop\AskMate\bin\Debug\netcoreapp3.1\AskMate.Views.pdb
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\AskMate.csprojAssemblyReference.cache
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\staticwebassets\AskMate.StaticWebAssets.Manifest.cache
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\staticwebassets\AskMate.StaticWebAssets.xml
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\AskMate.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\AskMate.RazorAssemblyInfo.cache
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\AskMate.RazorAssemblyInfo.cs
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\AskMate.AssemblyInfoInputs.cache
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\AskMate.AssemblyInfo.cs
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\AskMate.TagHelpers.input.cache
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\AskMate.TagHelpers.output.cache
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\AskMate.RazorCoreGenerate.cache
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\Razor\Views\Questions\All.cshtml.g.cs
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\AskMate.RazorTargetAssemblyInfo.cache
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\AskMate.RazorTargetAssemblyInfo.cs
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\AskMate.Views.pdb
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\AskMate.dll
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\AskMate.pdb
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\AskMate.csproj.CopyComplete
