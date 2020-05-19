@@ -147,4 +147,6 @@ C:\Users\Geris\Desktop\AskMate\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcore
 C:\Users\Geris\Desktop\AskMate\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\AskMate.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Geris\Desktop\AskMate\bin\Debug\netcoreapp3.1\Npgsql.dll
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\Razor\Views\Questions\GetOne.cshtml.g.cs
 C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\Razor\Views\Questions\All.cshtml.g.cs
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\Razor\Views\Questions\Create.cshtml.g.cs

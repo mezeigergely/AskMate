@@ -1,16 +1,35 @@
-﻿@using AskMate.Domain
-@model List<Question>
+﻿@model IEnumerable<AskMate.Models.QuestionModel>
+
 @{
-    ViewData["Title"] = "Questions";
+    ViewData["Title"] = "All";
 }
-<div class="text-center">
-    <h1 class="display-4">Questions</h1>
-</div>
-<ul>
-    @foreach (var q in Model)
-    {
-        <li>
-            <p>@q.Title</p>
-        </li>
-    }
-</ul>
+
+<h1>All</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "GetOne", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -9,5 +9,7 @@ namespace AskMate.Services
     public interface IQuestionsService
     {
         List<Question> GetAll();
+        Question GetOne(int id);
+        int Create(string title, string message);
     }
 }

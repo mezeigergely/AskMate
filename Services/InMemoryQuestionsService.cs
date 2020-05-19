@@ -8,7 +8,7 @@ namespace AskMate.Services
 {
     public class InMemoryQuestionsService : IQuestionsService
     {
-        private List<Question> _questions = new List<Question>();
+        private readonly List<Question> _questions = new List<Question>();
 
         public InMemoryQuestionsService()
         {
@@ -17,9 +17,29 @@ namespace AskMate.Services
             _questions.Add(new Question { Id = 3, Title = "How old is the bus driver?", Message = "Do you how old he is?" });
         }
 
+        public int Create(string title, string message)
+        {
+            int tempId = _questions.Count() + 1;
+            var newQuestion = new Question { Id = tempId, Title = title, Message = message};
+            _questions.Add(newQuestion);
+            return tempId;
+        }
+
         public List<Question> GetAll()
         {
             return _questions;
+        }
+
+        public Question GetOne(int id)
+        {
+            foreach (var question in _questions)
+            {
+                if (id == question.Id)
+                {
+                    return question;
+                }
+            }
+            return null;
         }
     }
 }

@@ -25,7 +25,27 @@ namespace AskMate.Controllers
         public IActionResult All()
         {
             var questions = _questionsService.GetAll();
-            return View(questions);
+            return View(questions.Select(x => new QuestionModel(x)).ToList());
+        }
+
+        [HttpGet]
+        public IActionResult GetOne(int id)
+        {
+            var question = _questionsService.GetOne(id);
+            return View(new QuestionModel(question));
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(AddQuestionModel newQuestion)
+        {
+            int id = _questionsService.Create(newQuestion.Title, newQuestion.Message);
+            return RedirectToAction("GetOne", new { id });
         }
     }
 }
