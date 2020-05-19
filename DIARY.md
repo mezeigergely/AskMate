@@ -27,4 +27,13 @@ Get 1 question by ID:
         3. Add this function to QuestionsController.cs
         4. View/Questions/GetOne.cshtml
         5. Add link to questions in All.cshtml
+Create new Question:
+        1. QuestionController.cs -> 2db Create function (HTTPGET, HTTPPOST)
+        2. Models/AddQuestionModel.cs
+        3. Models/QuestionModel.cs
+        4. IQuestionsService.cs Create method
+        4. InMemoryQuestionsService.cs -> implement Create method from IQuestionsService.cs
+        5. Views/Questions/Create.cshtml
+        6. Modify: Question.cs => QuestionModel.cs
+        
         
