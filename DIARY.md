@@ -19,3 +19,12 @@
             services.AddControllersWithViews();
             services.AddSingleton(typeof(IQuestionsService), new InMemoryQuestionsService());
         }
+
+5/19/2020
+Get 1 question by ID:
+        1. Add "Question GetOne(int id);" into IQuestionsService
+        2. Add this function to InMemoryQuestionsService.cs
+        3. Add this function to QuestionsController.cs
+        4. View/Questions/GetOne.cshtml
+        5. Add link to questions in All.cshtml
+        
