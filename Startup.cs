@@ -25,7 +25,8 @@ namespace AskMate
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddSingleton(typeof(IQuestionsService), new InMemoryQuestionsService());
+            services.AddSingleton(typeof(IQuestionsService), new CsvQuestionsService("questions.csv"));
+            services.AddSingleton(typeof(IAnswersService), new CsvAnswersService("answers.csv"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

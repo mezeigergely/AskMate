@@ -14,25 +14,28 @@ namespace AskMate.Controllers
     {
         private readonly ILogger<QuestionsController> _logger;
         private readonly IQuestionsService _questionsService;
+        private readonly IAnswersService _answersService;
 
-        public QuestionsController(ILogger<QuestionsController> logger, IQuestionsService questionsService)
+        public QuestionsController(ILogger<QuestionsController> logger, IQuestionsService questionsService, IAnswersService answerService)
         {
             _logger = logger;
             _questionsService = questionsService;
+            _answersService = answerService;
         }
 
         [HttpGet]
         public IActionResult All()
         {
             var questions = _questionsService.GetAll();
-            return View(questions.Select(x => new QuestionModel(x)).ToList());
+            return View(questions.Select(x => new QuestionListItemModel(x)).ToList());
         }
 
         [HttpGet]
         public IActionResult GetOne(int id)
         {
             var question = _questionsService.GetOne(id);
-            return View(new QuestionModel(question));
+            var answers = _answersService.GetAll(id);
+            return View(new QuestionDetailModel(question, answers));
         }
 
         [HttpGet]
