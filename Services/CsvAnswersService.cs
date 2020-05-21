@@ -24,10 +24,11 @@ namespace AskMate.Services
             return ToAnswer(readFrom(id));
         }
 
-        public int Add(int questionId, string message)
+        public int Add(int questionId, string message, DateTime dateTime)
         {
             int nextId = GetAll().Select(x => x.Id).Max() + 1;
-            appendTo(nextId, questionId, message);
+            dateTime = DateTime.Now;
+            appendTo(nextId, questionId, message, dateTime);
             return nextId;
         }
 
@@ -44,7 +45,8 @@ namespace AskMate.Services
             {
                 Id = int.Parse(fields[0]),
                 QuestionId = int.Parse(fields[1]),
-                Message = fields[2]
+                Message = fields[2],
+                SubmissionTime = DateTime.Parse(fields[3])
             };
         }
     }

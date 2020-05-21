@@ -12,10 +12,11 @@ namespace AskMate.Services
         {
         }
 
-        public int Create(string title, string message)
+        public int Create(string title, string message, DateTime dateTime)
         {
             int nextId = GetAll().Select(x => x.Id).Max() + 1;
-            appendTo(nextId, title, message);
+            dateTime = DateTime.Now;
+            appendTo(nextId, title, message, dateTime);
             return nextId;
         }
 
@@ -38,7 +39,9 @@ namespace AskMate.Services
             {
                 Id = int.Parse(fields[0]),
                 Title = fields[1],
-                Message = fields[2]
+                Message = fields[2],
+                SubmissionTime = DateTime.Parse(fields[3])
+                
             };
         }
     }

@@ -7,7 +7,7 @@ namespace AskMate.Models
 {
     public class AddAnswerModel
     {
-        public string Title { get; set; }
         public string Message { get; set; }
+        public DateTime SubmissionTime { get; set; }
     }
 }

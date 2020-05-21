@@ -24,7 +24,7 @@ namespace AskMate.Controllers
         }
 
         [HttpGet]
-        public IActionResult All()
+        public IActionResult List()
         {
             var questions = _questionsService.GetAll();
             return View(questions.Select(x => new QuestionListItemModel(x)).ToList());
@@ -47,7 +47,22 @@ namespace AskMate.Controllers
         [HttpPost]
         public IActionResult Create(AddQuestionModel newQuestion)
         {
-            int id = _questionsService.Create(newQuestion.Title, newQuestion.Message);
+            int id = _questionsService.Create(newQuestion.Title, newQuestion.Message, DateTime.Now);
+            return RedirectToAction("GetOne", new { id });
+        }
+
+        [HttpGet]
+        [Route("[controller]/Add/[action]/{id}", Name = "add-answer")]
+        public IActionResult Answer(int id)
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("[controller]/Add/[action]/{id}", Name = "add-answer")]
+        public IActionResult Answer(int id, AddAnswerModel newAnswer)
+        {
+            _answersService.Add(id, newAnswer.Message, DateTime.Now);
             return RedirectToAction("GetOne", new { id });
         }
     }
