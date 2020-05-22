@@ -23,3 +23,30 @@ Create new Question:
 	5. InMemoryQuestionsService.cs -> implement Create method from IQuestionsService.cs
 	6. Views/Questions/Create.cshtml
 	7. Modify: Question.cs => QuestionModel.cs
+
+
+5/22/2020
+Deletable questions and answers
+	1. Create an AnswersController.cs
+		- ILogger field, IAnswersService field
+		- constructor
+		- create a Delete function
+			- call the Delete method from IAnswersService
+			- return Redirect(Request.Headers["Referer"]);
+	2. Declared Delete function in IAnswersService
+	3. Declared DeleteAll function in IAnswersService
+	4. Declared Delete function in IQuestionsService
+	5. Create a Delete function in QuestionsController
+		- call the DeleteAll method from IAnswersService
+		- call the Delete method from IQuestionsService
+		if (redirect == null)
+		{
+			return Redirect(Request.Headers["Referer"]);
+		}
+            	return LocalRedirect(redirect);
+	6. Update CSV services...
+	7. Update List.cshtml and GetOne.cshtml
+
+
+
+			

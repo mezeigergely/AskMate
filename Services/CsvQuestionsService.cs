@@ -49,5 +49,12 @@ namespace AskMate.Services
                 Message = fields[2]
             };
         }
+
+        public void Update(int id, string title, string message, DateTime dateTime)
+        {
+            dateTime = DateTime.Now;
+            Question q = toQuestion(readFrom(id));
+            updateAt(id, q.Id, title, message, dateTime);
+        }
     }
 }

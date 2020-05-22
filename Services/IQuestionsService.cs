@@ -12,5 +12,6 @@ namespace AskMate.Services
         Question GetOne(int id);
         int Add(string title, string message, DateTime dateTime);
         void Delete(int id);
+        void Update(int id, string title, string message, DateTime dateTime);
     }
 }

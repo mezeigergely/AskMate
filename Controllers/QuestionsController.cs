@@ -77,5 +77,23 @@ namespace AskMate.Controllers
             }
             return LocalRedirect(redirect);
         }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var question = _questionsService.GetOne(id);
+            return View(new AddQuestionModel
+            {
+                Title = question.Title,
+                Message = question.Message
+            });
+        }
+
+        [HttpPost]
+        public IActionResult Edit(int id, AddQuestionModel newQuestion)
+        {
+            _questionsService.Update(id, newQuestion.Title, newQuestion.Message, newQuestion.SubmissionTime);
+            return RedirectToAction("GetOne", new { id });
+        }
     }
 }

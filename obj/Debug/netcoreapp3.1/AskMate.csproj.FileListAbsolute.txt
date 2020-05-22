@@ -145,3 +145,4 @@ C:\Users\Geris\Desktop\AskMate\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAna
 C:\Users\Geris\Desktop\AskMate\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\AskMate.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\Razor\Views\Questions\Answer.cshtml.g.cs
+C:\Users\Geris\Desktop\AskMate\obj\Debug\netcoreapp3.1\Razor\Views\Questions\Edit.cshtml.g.cs
