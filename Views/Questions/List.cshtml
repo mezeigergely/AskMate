@@ -1,35 +1,52 @@
-﻿@model IEnumerable<AskMate.Models.QuestionListItemModel>
+﻿@*@model IEnumerable<AskMate.Models.QuestionListItemModel>
 
+    @{
+        ViewData["Title"] = "List";
+    }
+
+    <h1>All</h1>
+
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "GetOne", new { id=item.Id }) |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>*@
+
+@model List<QuestionListItemModel>
 @{
-    ViewData["Title"] = "List";
+    ViewData["Title"] = "Questions";
 }
-
-<h1>All</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "GetOne", new { id=item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<h1 class="display-4">@ViewData["Title"]</h1>
+<ul>
+    @foreach (var q in Model)
+    {
+        <li>
+            <form class="inline" method="post" asp-action="Delete" asp-route-id="@q.Id">
+            </form>
+            <a asp-controller="Questions" asp-action="GetOne" asp-route-id="@q.Id">@q.Title</a>
+        </li>
+    }
+</ul>
+<a asp-controller="Questions" asp-action="Add">Add question</a>

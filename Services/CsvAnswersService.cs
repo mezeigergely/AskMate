@@ -1,7 +1,9 @@
 ﻿using AskMate.Domain;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace AskMate.Services
@@ -26,10 +28,21 @@ namespace AskMate.Services
 
         public int Add(int questionId, string message, DateTime dateTime)
         {
-            int nextId = GetAll().Select(x => x.Id).Max() + 1;
+            var answers = GetAll();
+            int nextId = answers.Count == 0 ? 1 : answers.Select(x => x.Id).Max() + 1;
             dateTime = DateTime.Now;
             appendTo(nextId, questionId, message, dateTime);
             return nextId;
+        }
+
+        public void Delete(int id)
+        {
+            deleteAt(id);
+        }
+
+        public void DeleteAll(int questionId)
+        {
+            deleteAt(fields => !fields[1].Equals(questionId.ToString()));
         }
 
         private List<Answer> GetAll()

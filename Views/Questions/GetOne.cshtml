@@ -1,61 +1,72 @@
 ﻿@model AskMate.Models.QuestionDetailModel
-@functions {
-    private string tryPluralize(int count, string singular, string plural)
-    {
-        return count == 0 || count == 1 ? singular : plural;
-    }
-}
-
-@{
-    ViewData["Title"] = "GetOne";
-}
-
-<div>
-    <h4>Question</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Id)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Id)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Message)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Message)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.SubmissionTime)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.SubmissionTime)
-        </dd>
-    </dl>
-</div>
-<h4 class="display-5">Answers</h4>
-@if (Model.Answers.Count == 0)
-{
-    <p class="text-muted">No answers yet</p>
-}
-else
-{
-    <ul>
-        @foreach (var a in Model.Answers)
+    @functions {
+        private string tryPluralize(int count, string singular, string plural)
         {
-            <li>@a.Message <p>(@a.SubmissionTime)</p></li>
+            return count == 0 || count == 1 ? singular : plural;
         }
-    </ul>
-}
+    }
+
+    @{
+        ViewData["Title"] = "GetOne";
+    }
+
+    <div>
+        <h4>Question</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Id)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Id)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Message)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Message)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.SubmissionTime)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.SubmissionTime)
+            </dd>
+        </dl>
+    </div>
+    <h4 class="display-5">Answers</h4>
+    @if (Model.Answers.Count == 0)
+    {
+        <p class="text-muted">No answers yet</p>
+    }
+    else
+    {
+        <ul>
+            @foreach (var a in Model.Answers)
+            {
+                <li>@a.Message<p>(@a.SubmissionTime)</p>
+                <form class="inline" method="post" asp-controller="Answers" asp-action="Delete" asp-route-id="@a.Id">
+                <a asp-controller="Answers" asp-action="Delete" asp-route-id="@a.Id" onclick="javascript: this.parentNode.submit();
+                return false;">delete answer</a>
+                </form>
+                </li>
+                
+            }
+        </ul>
+     }
 <div>
-    <a asp-route="add-answer" asp-route-id="@Model.Id">Add answer</a> |
+    <a asp-route="add-answer" asp-route-id="@Model.Id">Add Answer</a> |
     @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
     <a asp-action="List">Back to Questions</a>
 </div>
+<small class="text-muted">
+    <form class="inline" method="post" asp-action="Delete" asp-route-id="@Model.Id" asp-route-redirect="/">
+        <a href="#" onclick="javascript: this.parentNode.submit(); return false;">Delete Question</a>
+    </form>
+</small>

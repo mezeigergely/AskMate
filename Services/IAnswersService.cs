@@ -11,5 +11,7 @@ namespace AskMate.Services
         List<Answer> GetAll(int questionId);
         Answer GetOne(int id);
         int Add(int questionId, string message, DateTime dateTime);
+        void Delete(int id);
+        void DeleteAll(int questionId);
     }
 }

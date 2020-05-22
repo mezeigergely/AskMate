@@ -47,7 +47,7 @@ namespace AskMate.Controllers
         [HttpPost]
         public IActionResult Create(AddQuestionModel newQuestion)
         {
-            int id = _questionsService.Create(newQuestion.Title, newQuestion.Message, DateTime.Now);
+            int id = _questionsService.Add(newQuestion.Title, newQuestion.Message, DateTime.Now);
             return RedirectToAction("GetOne", new { id });
         }
 
@@ -64,6 +64,18 @@ namespace AskMate.Controllers
         {
             _answersService.Add(id, newAnswer.Message, DateTime.Now);
             return RedirectToAction("GetOne", new { id });
+        }
+
+        [HttpPost]
+        public IActionResult Delete(int id, string redirect)
+        {
+            _questionsService.Delete(id);
+            _answersService.DeleteAll(id);
+            if (redirect == null)
+            {
+                return Redirect(Request.Headers["Referer"]);
+            }
+            return LocalRedirect(redirect);
         }
     }
 }

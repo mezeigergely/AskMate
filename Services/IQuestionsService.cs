@@ -10,6 +10,7 @@ namespace AskMate.Services
     {
         List<Question> GetAll();
         Question GetOne(int id);
-        int Create(string title, string message, DateTime dateTime);
+        int Add(string title, string message, DateTime dateTime);
+        void Delete(int id);
     }
 }
